@@ -177,19 +177,19 @@
       "name": "liblinear-ruby",
       "github": "https://github.com/kei500/liblinear-ruby",
       "target_python_library": "scikit-learn",
-      "group": "machine-leaning"
+      "group": "machine-learning"
     },
     {
       "name": "rb-libsvm",
       "github": "https://github.com/febeling/rb-libsvm",
       "target_python_library": "scikit-learn",
-      "group": "machine-leaning"
+      "group": "machine-learning"
     },
     {
       "name": "decisiontree",
       "github": "https://github.com/igrigorik/decisiontree",
       "target_python_library": "scikit-learn",
-      "group": "machine-leaning"
+      "group": "machine-learning"
     },
     {
       "name": "numo-narray",
@@ -231,7 +231,7 @@
       "name": "daru",
       "github": "https://github.com/v0dro/daru",
       "target_python_library": "pandas",
-      "gruop": "data"
+      "group": "data"
     },
     {
       "name": "statsample",
