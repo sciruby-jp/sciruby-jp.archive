@@ -29,7 +29,7 @@ export let conf = {
 };
 
 function groupToColor (group) {
-  if (group != undefined) {
+  if (group !== undefined) {
     return colors[group]
   } else {
     return '#ddd'
