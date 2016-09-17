@@ -5,17 +5,15 @@ import Graph   from './Graph';
 import Content from './Content';
 import Footer  from './Footer';
 import './App.css';
-import rubyImg from './ruby.png';
-import pythonImg from './python.png';
+import rubyJson   from './ruby.json';
+import pythonJson from './python.json';
+import rubyImg    from './ruby.png';
+import pythonImg  from './python.png';
 
 class App extends Component {
   constructor(props) {
     super(props)
-
-    this.ruby   = require('./ruby.json');
-    this.python = require('./python.json');
-
-    this.state = { imgUrl: '', json: this.ruby }
+    this.state = { imgUrl: '', json: rubyJson }
   }
 
   componentDidMount() {
@@ -28,13 +26,19 @@ class App extends Component {
 
   handleScroll = (e) => {
     const scroll = e.srcElement.body.scrollTop;
+    var imgUrl, json;
     if (scroll < 200) {
-      this.setState({ imgUrl: '', json: this.ruby });
+      imgUrl = '';
+      json   = rubyJson;
     } else if (scroll >= 200 && scroll <= 500) {
-      this.setState({ imgUrl: rubyImg, json: this.ruby });
+      imgUrl = rubyImg;
+      json   = rubyJson;
     } else {
-      this.setState({ imgUrl: pythonImg, json: this.python });
+      imgUrl = pythonImg;
+      json   = pythonJson;
     }
+
+    this.setState({ imgUrl: imgUrl, json: json })
   }
 
   render() {
