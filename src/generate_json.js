@@ -85,7 +85,6 @@ const big_circle_radius = big_circle_radius_rate * base_size;
             const position = rotate(x, y, rad);
             return { lib, position };
         });
-        
 
         hash.elements.nodes = hash.elements.nodes.concat(group_libs.map(({lib, position})=>{
             return {
@@ -109,14 +108,27 @@ const big_circle_radius = big_circle_radius_rate * base_size;
     });
 
     hash.elements.edges = edges.map((edge)=>{
-        return {
+        const source = hash.elements.nodes.find((node)=>{ return (node.data.name === edge.source) })
+        const target = hash.elements.nodes.find((node)=>{ return (node.data.name === edge.target) })
+
+        let group = null;
+        if (source.data.group === target.data.group) {
+            group = source.data.group;
+        }
+
+        const ret_hash = {
             data: {
                 id: `${edge.source}_${edge.target}`,
                 source: edge.source,
                 target: edge.target,
-                group: 1,
             }
         };
+
+        if (group !== null){
+            ret_hash.data["group"] = group;
+        }
+
+        return ret_hash;
     });
 
     fs.writeFileSync(`./src/${lang}.json`, JSON.stringify(hash), 'utf-8');
