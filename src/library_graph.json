@@ -2,47 +2,58 @@
   "python_libraries": [
     {
       "name": "scikit-learn",
-      "github": "https://github.com/scikit-learn/scikit-learn"
+      "github": "https://github.com/scikit-learn/scikit-learn",
+      "group": "machine-learning"
     },
     {
       "name": "numpy",
-      "github": "https://github.com/numpy/numpy"
+      "github": "https://github.com/numpy/numpy",
+      "group": "computing"
     },
     {
       "name": "scipy",
-      "github": "https://github.com/scipy/scipy"
+      "github": "https://github.com/scipy/scipy",
+      "group": "computing"
     },
     {
       "name": "matplotlib",
-      "github": "https://github.com/matplotlib/matplotlib"
+      "github": "https://github.com/matplotlib/matplotlib",
+      "group": "visualization"
     },
     {
       "name": "ipykernel",
-      "github": "https://github.com/ipython/ipykernel"
+      "github": "https://github.com/ipython/ipykernel",
+      "group": "visualization"
     },
     {
       "name": "plotly.py",
-      "github": "https://github.com/plotly/plotly.py"
+      "github": "https://github.com/plotly/plotly.py",
+      "group": "visualization"
     },
     {
       "name": "pandas",
-      "github": "https://github.com/pydata/pandas"
+      "github": "https://github.com/pydata/pandas",
+      "group": "data"
     },
     {
       "name": "statsmodels",
-      "github": "https://github.com/statsmodels/statsmodels"
+      "github": "https://github.com/statsmodels/statsmodels",
+      "group": "stats"
     },
     {
       "name": "patsy",
-      "github": "https://github.com/pydata/patsy"
+      "github": "https://github.com/pydata/patsy",
+      "group": "stats"
     },
     {
       "name": "cython",
-      "github": "https://github.com/cython/cython"
+      "github": "https://github.com/cython/cython",
+      "group": "computing"
     },
     {
       "name": "sympy",
-      "github": "https://github.com/sympy/sympy"
+      "github": "https://github.com/sympy/sympy",
+      "group": "symbol-calculation"
     }
   ],
   "python_edge": [
@@ -165,67 +176,80 @@
     {
       "name": "liblinear-ruby",
       "github": "https://github.com/kei500/liblinear-ruby",
-      "target_python_library": "scikit-learn"
+      "target_python_library": "scikit-learn",
+      "group": "machine-leaning"
     },
     {
       "name": "rb-libsvm",
       "github": "https://github.com/febeling/rb-libsvm",
-      "target_python_library": "scikit-learn"
+      "target_python_library": "scikit-learn",
+      "group": "machine-leaning"
     },
     {
       "name": "decisiontree",
       "github": "https://github.com/igrigorik/decisiontree",
-      "target_python_library": "scikit-learn"
+      "target_python_library": "scikit-learn",
+      "group": "machine-leaning"
     },
     {
       "name": "numo-narray",
       "github": "https://github.com/ruby-numo/narray",
-      "target_python_library": "numpy"
+      "target_python_library": "numpy",
+      "group": "computing"
     },
     {
       "name": "num-buffer",
       "github": "https://github.com/mrkn/num_buffer",
-      "target_python_library": "numpy"
+      "target_python_library": "numpy",
+      "group": "computing"
     },
     {
       "name": "nmatrix",
       "github": "https://github.com/SciRuby/nmatrix",
-      "target_python_library": "numpy"
+      "target_python_library": "numpy",
+      "group": "computing"
     },
     {
       "name": "mdarray",
       "github": "https://github.com/rbotafogo/mdarray",
-      "target_python_library": "numpy"
+      "target_python_library": "numpy",
+      "group": "computing"
     },
     {
       "name": "iruby",
       "github": "https://github.com/SciRuby/iruby",
-      "target_python_library": "ipykernel"
+      "target_python_library": "ipykernel",
+      "group": "visualization"
     },
     {
       "name": "rbplotly",
       "github": "https://github.com/ash1day/rbplotly",
-      "target_python_library": "plotly.py"
+      "target_python_library": "plotly.py",
+      "group": "visualization"
     },
     {
       "name": "daru",
       "github": "https://github.com/v0dro/daru",
-      "target_python_library": "pandas"
+      "target_python_library": "pandas",
+      "gruop": "data"
     },
     {
       "name": "statsample",
       "github": "https://github.com/sciruby/statsample",
-      "target_python_library": "statsmodels"
+      "target_python_library": "statsmodels",
+      "group": "stats"
     },
     {
       "name": "rubex",
       "github": "https://github.com/v0dro/rubex",
-      "target_python_library": "cython"
+      "target_python_library": "cython",
+      "group": "computing"
     },
     {
       "name": "symengine",
       "github": "https://github.com/symengine/symengine.rb",
-      "target_python_library": "sympy"
+      "target_python_library": "sympy",
+      "group": "symbol-calculation"
     }
   ],
   "ruby_edge": [
