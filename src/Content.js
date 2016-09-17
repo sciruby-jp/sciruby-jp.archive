@@ -3,12 +3,14 @@ import './Content.css';
 
 class Content extends Component {
   render() {
+    var divStyle = { backgroundImage: 'url(' + this.props.imgUrl + ')' }
+
     return (
-      <div className="Content">
+      <div style={divStyle} className="Content">
         <section>
           <h3>SciRubyとは</h3>
           <p>
-            SciRubyは科学技術計算・データ可視化用途のgem群の総称で、このサイトでは<br/>
+            SciRubyは科学技術計算・データ可視化用途のgem群の総称で、このサイトでは
             <ul>
               <li>なぜ我々が(RuPythonだけを使うのではなく)科学技術計算用途で未整備のRuby gem群を整備しているのか</li>
               <li>Pythonのこの機能はRubyで実現できるか?</li>

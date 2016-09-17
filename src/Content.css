@@ -1,9 +1,11 @@
 div.Content {
   width: 40%;
   margin: -800px 3em 3em auto;
-}
-
-div.Content section {
+  background-image: url(ruby.png);
+  background-attachment: fixed;
+  background-size: 200px;
+  background-repeat: no-repeat;
+  background-position: 80%;
 }
 
 div.Content section h3 {
