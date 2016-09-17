@@ -6,8 +6,8 @@ class App extends Component {
   constructor(props) {
     super(props)
 
-    this.ruby   = require('./ruby.cyjs');
-    this.python = require('./python.cyjs');
+    this.ruby   = require('./ruby.json');
+    this.python = require('./python.json');
 
     this.state = { cyjs: this.python };
   }

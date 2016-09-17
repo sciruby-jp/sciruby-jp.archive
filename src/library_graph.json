@@ -56,7 +56,7 @@
       "group": "symbol-calculation"
     }
   ],
-  "python_edge": [
+  "python_edges": [
     {
       "source": "scikit-learn",
       "target": "numpy",
@@ -252,7 +252,7 @@
       "group": "symbol-calculation"
     }
   ],
-  "ruby_edge": [
+  "ruby_edges": [
     {
       "source": "rbplotly",
       "target": "iruby",
