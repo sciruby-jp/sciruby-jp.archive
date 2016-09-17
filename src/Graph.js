@@ -9,11 +9,17 @@ class Graph extends Component{
     this.cy = cytoscape(conf);
     this.cy.json(this.props.json);
     this.cy.layout({ name: 'preset' });
+    this.cy.on('tap', 'node', function(){
+        window.open(this.data('github_url'));
+    });
   }
 
   componentDidUpdate() {
     this.cy.json(this.props.json);
     this.cy.layout({ name: 'preset' });
+    this.cy.on('tap', 'node', function(){
+        window.open(this.data('github_url'));
+    });
   }
 
   componentWillUnmount() {

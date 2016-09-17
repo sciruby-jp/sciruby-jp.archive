@@ -99,9 +99,11 @@ const big_circle_radius = big_circle_radius_rate * base_size;
         }));
     });
     
+    // add stargazer_count and github url
     hash.elements.nodes = hash.elements.nodes.map((node)=>{
        const library = libraries.find((lib)=>{ return (lib.name === node.data.name) });
        node.data["stargazer_count"] = crawl_stargazer_count(library.github);
+       node.data["github_url"] = library.github;
        console.log(node);
        return node;
     });
