@@ -1,0 +1,15 @@
+div.Content {
+  width: 100%;
+  text-align: center;
+  padding: 5em 0 0 0;
+}
+
+h3 {
+  color: #101F3F;
+  letter-spacing: 0em;
+  font-size: 60px;
+}
+
+h3 span {
+  margin-right: 0.2em;
+}
