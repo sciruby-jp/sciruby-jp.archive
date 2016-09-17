@@ -13,6 +13,7 @@ class Graph extends Component{
 
   componentDidUpdate() {
     this.cy.json(this.props.json);
+    this.cy.layout({ name: 'circle' });
   }
 
   componentWillUnmount() {
