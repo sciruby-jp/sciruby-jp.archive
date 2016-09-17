@@ -6,21 +6,21 @@ class Content extends Component {
   constructor(props) {
     super(props)
 
-    this.ruby   = require('./ruby.cyjs');
-    this.python = require('./python.cyjs');
+    this.ruby   = require('./ruby.json');
+    this.python = require('./python.json');
 
-    this.state = { cyjs: this.python };
+    this.state = { json: this.python };
   }
 
   componentDidMount() {
   }
 
   handleClickRuby = (e) => {
-    this.setState({ cyjs: this.ruby });
+    this.setState({ json: this.ruby });
   }
 
   handleClickPython = (e) => {
-    this.setState({ cyjs: this.python });
+    this.setState({ json: this.python });
   }
 
   render() {
@@ -29,7 +29,7 @@ class Content extends Component {
         <div>
         <h3><span>SciRuby</span>へようこそ</h3>
         </div>
-        <Graph cyjs={this.state.cyjs} />
+        <Graph json={this.state.json} />
         <button onClick={this.handleClickRuby}>ruby</button>
         <button onClick={this.handleClickPython}>python</button>
       </div>
