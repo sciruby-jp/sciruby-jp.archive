@@ -7,12 +7,12 @@ class Graph extends Component{
   componentDidMount() {
     conf.container = this.refs.cyelement;
     this.cy = cytoscape(conf);
-    this.cy.json(this.props.cyjs);
+    this.cy.json(this.props.json);
     this.cy.layout({ name: 'circle' });
   }
 
   componentDidUpdate() {
-    this.cy.json(this.props.cyjs);
+    this.cy.json(this.props.json);
   }
 
   componentWillUnmount() {
