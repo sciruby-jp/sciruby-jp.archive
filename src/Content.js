@@ -9,7 +9,7 @@ class Content extends Component {
     this.ruby   = require('./ruby.json');
     this.python = require('./python.json');
 
-    this.state = { json: this.python };
+    this.state = { json: this.ruby };
   }
 
   componentDidMount() {
@@ -26,9 +26,6 @@ class Content extends Component {
   render() {
     return (
       <div className="Content">
-        <div>
-        <h3><span>SciRuby</span>へようこそ</h3>
-        </div>
         <Graph json={this.state.json} />
         <button onClick={this.handleClickRuby}>ruby</button>
         <button onClick={this.handleClickPython}>python</button>
