@@ -1,0 +1,20 @@
+div.Content {
+  width: 40%;
+  margin: -800px 3em 3em auto;
+}
+
+div.Content img {
+  width: 200px;
+  position: fixed;
+  right: 15em;
+  bottom: 15em;
+}
+
+div.Content section h3 {
+  font-size: 30px;
+}
+
+div.Content section p {
+  margin-left: 1em;
+  font-size: 18px;
+}

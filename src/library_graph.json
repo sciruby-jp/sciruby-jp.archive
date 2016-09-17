@@ -1,0 +1,287 @@
+{
+  "python_libraries": [
+    {
+      "name": "scikit-learn",
+      "github": "https://github.com/scikit-learn/scikit-learn",
+      "group": "machine-learning"
+    },
+    {
+      "name": "numpy",
+      "github": "https://github.com/numpy/numpy",
+      "group": "computing"
+    },
+    {
+      "name": "scipy",
+      "github": "https://github.com/scipy/scipy",
+      "group": "computing"
+    },
+    {
+      "name": "matplotlib",
+      "github": "https://github.com/matplotlib/matplotlib",
+      "group": "visualization"
+    },
+    {
+      "name": "ipykernel",
+      "github": "https://github.com/ipython/ipykernel",
+      "group": "visualization"
+    },
+    {
+      "name": "plotly.py",
+      "github": "https://github.com/plotly/plotly.py",
+      "group": "visualization"
+    },
+    {
+      "name": "pandas",
+      "github": "https://github.com/pydata/pandas",
+      "group": "data"
+    },
+    {
+      "name": "statsmodels",
+      "github": "https://github.com/statsmodels/statsmodels",
+      "group": "stats"
+    },
+    {
+      "name": "patsy",
+      "github": "https://github.com/pydata/patsy",
+      "group": "stats"
+    },
+    {
+      "name": "cython",
+      "github": "https://github.com/cython/cython",
+      "group": "computing"
+    },
+    {
+      "name": "sympy",
+      "github": "https://github.com/sympy/sympy",
+      "group": "symbol-calculation"
+    }
+  ],
+  "python_edges": [
+    {
+      "source": "scikit-learn",
+      "target": "numpy",
+      "description": "scikit-learnにnumpyは必須です",
+      "type": "depends"
+    },
+    {
+      "source": "scikit-learn",
+      "target": "scipy",
+      "description": "scikit-learnにscipyは必須です",
+      "type": "depends"
+    },
+    {
+      "source": "scikit-learn",
+      "target": "ipykernel",
+      "description": "Jupyter Notebookでの併用が便利です",
+      "type": "optional"
+    },
+    {
+      "source": "scikit-learn",
+      "target": "cython",
+      "description": "scikit-learnの一部のmoduleでcythonを用いた高速化が図られています",
+      "type": "optional"
+    },
+    {
+      "source": "matplotlib",
+      "target": "ipykernel",
+      "description": "Jupyter Notebookでの併用が便利です",
+      "type": "optional"
+    },
+    {
+      "source": "matplotlib",
+      "target": "numpy",
+      "description": "matplotlibにnumpyは必須です",
+      "type": "depends"
+    },
+    {
+      "source": "scipy",
+      "target": "ipykernel",
+      "description": "Jupyter Notebookでの併用が便利です",
+      "type": "optional"
+    },
+    {
+      "source": "scipy",
+      "target": "numpy",
+      "description": "scipyにnumpyは必須です",
+      "type": "depends"
+    },
+    {
+      "source": "pandas",
+      "target": "ipykernel",
+      "description": "Jupyter Notebookでの併用が便利です",
+      "type": "optional"
+    },
+    {
+      "source": "pandas",
+      "target": "numpy",
+      "description": "pandasにnumpyは必須です",
+      "type": "depends"
+    },
+    {
+      "source": "pandas",
+      "target": "matplotlib",
+      "description": "pandasのdataframeは簡単にmatplotlibでplotできます",
+      "type": "optional"
+    },
+    {
+      "source": "pandas",
+      "target": "cython",
+      "description": "pandasはcythonで高速化が図られています",
+      "type": "depends"
+    },
+    {
+      "source": "statsmodels",
+      "target": "pandas",
+      "description": "statsmodelsで扱うデータにはpandasが活用されています",
+      "type": "depends"
+    },
+    {
+      "source": "statsmodels",
+      "target": "numpy",
+      "description": "statsmodelsにnumpyは必須です",
+      "type": "depends"
+    },
+    {
+      "source": "statsmodels",
+      "target": "scipy",
+      "description": "statsmodelsにscipyは必須です",
+      "type": "depends"
+    },
+    {
+      "source": "statsmodels",
+      "target": "patsy",
+      "description": "statsmodelsの統計モデル記述にpatsyが必要です",
+      "type": "depends"
+    },
+    {
+      "source": "statsmodels",
+      "target": "cython",
+      "description": "statsmodelsの高速化にcythonが活用されています",
+      "type": "depends"
+    },
+    {
+      "source": "statsmodels",
+      "target": "matplotlib",
+      "description": "statsmodelsのデータはpandasを介して簡単にmatplotlibでplotできます",
+      "type": "optional"
+    },
+    {
+      "source": "statsmodels",
+      "target": "ipykernel",
+      "description": "Jupyter Notebookでの併用が便利です",
+      "type": "optional"
+    }
+  ],
+  "ruby_libraries": [
+    {
+      "name": "liblinear-ruby",
+      "github": "https://github.com/kei500/liblinear-ruby",
+      "target_python_library": "scikit-learn",
+      "group": "machine-learning"
+    },
+    {
+      "name": "rb-libsvm",
+      "github": "https://github.com/febeling/rb-libsvm",
+      "target_python_library": "scikit-learn",
+      "group": "machine-learning"
+    },
+    {
+      "name": "decisiontree",
+      "github": "https://github.com/igrigorik/decisiontree",
+      "target_python_library": "scikit-learn",
+      "group": "machine-learning"
+    },
+    {
+      "name": "numo-narray",
+      "github": "https://github.com/ruby-numo/narray",
+      "target_python_library": "numpy",
+      "group": "computing"
+    },
+    {
+      "name": "num-buffer",
+      "github": "https://github.com/mrkn/num_buffer",
+      "target_python_library": "numpy",
+      "group": "computing"
+    },
+    {
+      "name": "nmatrix",
+      "github": "https://github.com/SciRuby/nmatrix",
+      "target_python_library": "numpy",
+      "group": "computing"
+    },
+    {
+      "name": "mdarray",
+      "github": "https://github.com/rbotafogo/mdarray",
+      "target_python_library": "numpy",
+      "group": "computing"
+    },
+    {
+      "name": "iruby",
+      "github": "https://github.com/SciRuby/iruby",
+      "target_python_library": "ipykernel",
+      "group": "visualization"
+    },
+    {
+      "name": "rbplotly",
+      "github": "https://github.com/ash1day/rbplotly",
+      "target_python_library": "plotly.py",
+      "group": "visualization"
+    },
+    {
+      "name": "daru",
+      "github": "https://github.com/v0dro/daru",
+      "target_python_library": "pandas",
+      "group": "data"
+    },
+    {
+      "name": "statsample",
+      "github": "https://github.com/sciruby/statsample",
+      "target_python_library": "statsmodels",
+      "group": "stats"
+    },
+    {
+      "name": "rubex",
+      "github": "https://github.com/v0dro/rubex",
+      "target_python_library": "cython",
+      "group": "computing"
+    },
+    {
+      "name": "symengine",
+      "github": "https://github.com/symengine/symengine.rb",
+      "target_python_library": "sympy",
+      "group": "symbol-calculation"
+    }
+  ],
+  "ruby_edges": [
+    {
+      "source": "rbplotly",
+      "target": "iruby",
+      "description": "irubyとの併用が便利です",
+      "type": "optional"
+    },
+    {
+      "source": "daru",
+      "target": "iruby",
+      "description": "irubyとの併用が便利です",
+      "type": "optional"
+    },
+    {
+      "source": "daru",
+      "target": "nmatrix",
+      "description": "nmatrixのオブジェクトをdaruのDataFrameにインポートできます",
+      "type": "optional"
+    },
+    {
+      "source": "daru",
+      "target": "mdarray",
+      "description": "mdarrayのオブジェクトをdaruのDataFrameにインポートできます",
+      "type": "optional"
+    },
+    {
+      "source": "statsample",
+      "target": "daru",
+      "description": "statsampleにdaruは必須です",
+      "type": "depends"
+    }
+  ]
+}

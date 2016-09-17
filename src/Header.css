@@ -1,0 +1,19 @@
+div.Header {
+  width: 100%;
+  text-align: center;
+  padding: 3em 0;
+}
+
+h1 {
+  letter-spacing: 0em;
+  font-size: 60px;
+  margin-bottom: 0.5em;
+}
+
+h1 span {
+  margin-right: 0.2em;
+}
+
+h2 {
+  font-weight: 300;
+}
