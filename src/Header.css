@@ -1,14 +1,12 @@
 div.Header {
   width: 100%;
   text-align: center;
-  padding: 3em 0 0 0;
-  color: #101F3F;
+  padding: 3em 0;
 }
 
 h1 {
   letter-spacing: 0em;
   font-size: 60px;
-  font-weight: 300;
   margin-bottom: 0.5em;
 }
 

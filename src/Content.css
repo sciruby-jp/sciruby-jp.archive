@@ -1,3 +1,16 @@
 div.Content {
-  height: 50em;
+  width: 40%;
+  margin: -800px 3em 3em auto;
+}
+
+div.Content section {
+}
+
+div.Content section h3 {
+  font-size: 30px;
+}
+
+div.Content section p {
+  margin-left: 1em;
+  font-size: 18px;
 }
