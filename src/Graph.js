@@ -1,22 +1,16 @@
 import React, {Component} from 'react';
 import cytoscape from 'cytoscape';
 import { conf } from './conf';
-var ruby = require('./ruby.cyjs');
 
 class Graph extends Component{
-  componentDidMount(){
+  componentDidMount() {
     conf.container = this.refs.cyelement;
-    let cy = cytoscape(conf);
-    this.cy = cy;
-    cy.json(ruby);
+    this.cy = cytoscape(conf);
+    this.cy.json(this.props.cyjs);
   }
 
-  shouldComponentUpdate(){
-    return false;
-  }
-
-  componentWillReceiveProps(nextProps){
-    this.cy.json(nextProps);
+  componentDidUpdate() {
+    this.cy.json(this.props.cyjs);
   }
 
   componentWillUnmount(){
