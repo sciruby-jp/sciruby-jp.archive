@@ -16,6 +16,7 @@ class Graph extends Component{
   componentWillReceiveProps(nextProps) {
     if (this.props.json.elements.nodes.length == nextProps.json.elements.nodes.length
      && this.props.json.elements.edges.length == nextProps.json.elements.edges.length) return;
+
     var elem = ReactDOM.findDOMNode(this);
     window.requestAnimationFrame(function() {
       elem.style.transition = `opacity ${fadeTime}ms`;
