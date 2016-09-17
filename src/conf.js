@@ -25,7 +25,7 @@ const style = cytoscape.stylesheet()
 export let conf = {
   style: style,
   zoomingEnabled: false,
-  pan: { x: 0, y: 0 },
+  pan: { x: 600, y: 350 },
 };
 
 function groupToColor (group) {
