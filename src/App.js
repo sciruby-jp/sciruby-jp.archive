@@ -25,8 +25,8 @@ class App extends Component {
             <Graph json={this.state.json} />
           </Sticky>
           <Content />
-          <Footer />
         </StickyContainer>
+        <Footer />
       </div>
     );
   }
