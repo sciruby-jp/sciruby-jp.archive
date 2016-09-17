@@ -7,8 +7,8 @@ const style = cytoscape.stylesheet()
   .selector('node')
     .css({
       'content': 'data(name)',
-      'width': '70',
-      'height': '70',
+      'width': 'mapData(stargazer_count, 0, 15000, 30, 500)',
+      'height': 'mapData(stargazer_count, 0, 15000, 30, 500)',
       'text-valign': 'center',
       'color': 'white',
       'text-outline-width': 2,

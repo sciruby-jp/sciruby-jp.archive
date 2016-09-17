@@ -1,10 +1,25 @@
 const graph = require('./library_graph.json');
 const fs = require('fs');
+const readline = require('readline');
 
 function rotate(x, y, rad){
 	const x1 = Math.cos(rad) * x - Math.sin(rad) * y;
 	const y1 = Math.cos(rad) * y + Math.sin(rad) * x;
     return { x: x1, y: y1 };
+}
+
+function crawl_stargazer_count(github_url){
+    const request = require('sync-request');
+
+	const username = process.argv[2];
+	const password = process.argv[3];
+
+    const repository_name = github_url.match(/https:\/\/github.com\/(.+)/)[1];
+    const api_url = `https:\/\/${username}:${password}@api.github.com/repos/${repository_name}`;
+
+    const response = request('GET', api_url, { headers: { 'User-Agent': 'sciruby-jp.github.io' } });
+    console.log(response.getBody().toString());
+    return JSON.parse(response.getBody().toString()).stargazers_count;
 }
 
 // library group rendered at center of the circle
@@ -83,6 +98,14 @@ const big_circle_radius = big_circle_radius_rate * base_size;
             };
         }));
     });
+    
+    hash.elements.nodes = hash.elements.nodes.map((node)=>{
+       const library = libraries.find((lib)=>{ return (lib.name === node.data.name) });
+       node.data["stargazer_count"] = crawl_stargazer_count(library.github);
+       console.log(node);
+       return node;
+    });
+
     hash.elements.edges = edges.map((edge)=>{
         return {
             data: {
