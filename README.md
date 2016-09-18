@@ -1,5 +1,5 @@
 
-Rubyにおける科学技術計算/データ可視化ライブラリの現状をまとめたWebページです。
+[sciruby-jp.github.io](https://sciruby-jp.github.io)は、Rubyにおける科学技術計算/データ可視化ライブラリの現状をまとめたWebページです。
 
 React.jsとcytoscape.jsを用いて作成しています。
 
