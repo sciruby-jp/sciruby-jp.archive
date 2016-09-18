@@ -2,25 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import './Content.css';
 
-const fadeTime = 500;
-
 class Content extends Component {
-  componentWillUpdate(nextProps, nextState) {
-    if (this.props.imgUrl == nextProps.imgUrl) return;
-
-    var elem = ReactDOM.findDOMNode(this.refs.img);
-    window.requestAnimationFrame(function() {
-      elem.style.transition = `opacity ${fadeTime/4}ms`;
-      elem.style.opacity = 0;
-    });
-    setTimeout(function() {
-      window.requestAnimationFrame(function() {
-        elem.style.transition = `opacity ${fadeTime}ms`;
-        elem.style.opacity = 1;
-      });
-    }.bind(this), fadeTime);
-  }
-
   render() {
     return (
       <div className="Content">

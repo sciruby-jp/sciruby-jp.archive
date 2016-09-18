@@ -27,10 +27,7 @@ class App extends Component {
   handleScroll = (e) => {
     const scroll = e.srcElement.body.scrollTop;
     var imgUrl, json;
-    if (scroll < 200) {
-      imgUrl = '';
-      json   = rubyJson;
-    } else if (scroll >= 200 && scroll <= 500) {
+    if (scroll <= 500) {
       imgUrl = rubyImg;
       json   = rubyJson;
     } else {
