@@ -12,9 +12,41 @@ $ npm install
 $ npm start
 ```
 
-# jsonファイルの更新方法
+# ライブラリの関係性グラフの更新
 
-`src/ruby.json`、`src/python.json`の２つのファイルは、`src/library_graph.json`の内容を元に生成されています。
+ライブラリの関係性グラフは、`src/ruby.json`、`src/python.json`の２つのファイルから生成されています。
+また、`src/ruby.json`、`src/python.json`の２つのファイルは、`src/library_graph.json`の内容を元に生成されています。
+
+関係性グラフにライブラリを追加するには、`src/library_graph.json`に追記し、`src/ruby.json`、`src/python.json`を再生成する必要があります。
+
+## `src/library_graph.json`に追記する
+
+Rubyのライブラリを追加するには、`src/library_graph.json`の、`"ruby_libraries"`キーの中に、
+
+```javascript
+    {
+      "name": "some_ruby_library",
+      "github": "https://github.com/repository_owner/some_ruby_library",
+      "group": "computing"
+    },
+```
+
+のようなHashを追記します。
+
+また、ライブラリ間の関係を表す線を追加するには、`"ruby_edges"`キーの中に、
+
+```javascript
+    {
+      "source": "library_name_using_target_library",
+      "target": "library_name_used_by_source_library",
+      "description": "library description",
+      "type": "${depends|optional}"
+    },
+```
+
+のようなHashを追記します。
+
+## `src/ruby.json` `src/python.json`の生成
 これらのファイルを再生成するには、以下のコマンドを実行します。
 
 ```bash
