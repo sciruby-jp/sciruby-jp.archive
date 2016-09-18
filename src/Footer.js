@@ -3,19 +3,18 @@ import './Footer.css';
 
 class Footer extends Component {
   render() {
-    const authers = [
-      { name: 'Kozo Nishida',     github_id: 'kozo2' },
+    const authors = [
       { name: 'Yoshihiro Ashida', github_id: 'ash1day' },
       { name: 'Yusuke Sangenya',  github_id: 'genya0407' }
-    ].map((auther) => {
-      return <a key={auther.name} href={`https://github.com/${auther.github_id}`} target="_blank">{ auther.name }</a>
+    ].map((author) => {
+      return <a key={author.name} href={`https://github.com/${author.github_id}`} target="_blank">{ author.name }</a>
     }).reduce((accu, elem) => {
       return accu === null ? [elem] : [...accu, ', ', elem]
     }, null);
 
     return (
       <footer className="Footer">
-        © 2016 { authers }
+        © 2016 { authors }
       </footer>
     );
   }
